@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Link Forwarder",
+    "version": "1.0",
+    "permissions": ["scripting", "tabs"],
+    "host_permissions": ["https://www.youtube.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/watch*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
